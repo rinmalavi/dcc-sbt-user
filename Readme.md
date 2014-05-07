@@ -25,6 +25,16 @@ All included (prolly)
     find revenj -type f -exec sudo install -o mono -g mono -m 750 '{}' /var/mono/wwwroot/myFirstMono/bin/ \;
     ````
 
+#Alternativly
+    ````sh
+    cd csproj
+    xbuild generatedModel.csproj
+    install -o mono -g mono -m 750 ../revenj/Revenj.Http.exe.config /var/mono/wwwroot/myFirstMono/bin/
+    find bin/Debug -type f -exec sudo install -o mono -g mono -m 750 '{}' /var/mono/wwwroot/myFirstMono/bin/ \;
+    ````
+
+#To start the server
+
 - start server
     ````sh
     /var/mono/wwwroot/myFirstMono/start.sh
@@ -33,6 +43,10 @@ All included (prolly)
     cd "$(dirname "$0")"/bin
     exec mono Revenj.Http.exe "$@" > ../logs/mono.log 2>&1
     bash /var/mono/wwwroot/myFirstMono/start.sh
+    ````
+- or form bin/
+    ````sh
+    mono Revenj.Http.exe |& less
     ````
 
 - to be continued ...
