@@ -13,6 +13,6 @@ using System;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
-[assembly: AssemblyVersion("2014.5.6.1536")]
-[assembly: AssemblyFileVersion("2014.5.6.1536")]
+[assembly: AssemblyVersion("2014.5.8.1805")]
+[assembly: AssemblyFileVersion("2014.5.8.1805")]
 [assembly: CLSCompliant(true)]

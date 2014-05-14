@@ -42,8 +42,6 @@ namespace SystemBoot
 			var postgresConverter = factory.Resolve<NGS.DatabasePersistence.Postgres.IPostgresConverterRepository>();
 			postgresConverter.RegisterConverter(typeof(myModule.A), new _DatabaseCommon.FactorymyModule_A.AConverter());
 			DatabaseRepositorymyModule.RegisterA.Register(factory);
-			postgresConverter.RegisterConverter(typeof(myModule.B), new _DatabaseCommon.FactorymyModule_B.BConverter());
-			DatabaseRepositorymyModule.RegisterB.Register(factory);
 		}
 	}
 }

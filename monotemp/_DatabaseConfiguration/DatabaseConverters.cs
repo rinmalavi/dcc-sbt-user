@@ -20,7 +20,6 @@ namespace _DatabaseConfiguration
 
 			System.Data.DataRow row = null;
 			_DatabaseCommon.FactorymyModule_A.AConverter.InitializeProperties(columnsInfo);
-			_DatabaseCommon.FactorymyModule_B.BConverter.InitializeProperties(columnsInfo);
 		}
 	}
 

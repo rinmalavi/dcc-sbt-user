@@ -1,4 +1,4 @@
-
+/*
 import sbt._
 import sbt.Keys._
 
@@ -12,3 +12,4 @@ object ClientSbtTest extends Build {
   ).dependsOn( clientSbt)
 }
 
+*/

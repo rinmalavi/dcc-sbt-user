@@ -15,13 +15,13 @@ All included (prolly)
 
 - or
     ````sh
-    setfacl -Rdm 'u:marin:rwx' /var/mono
-    setfacl -Rm 'u:marin:rwx' /var/mono
+    setfacl -Rdm 'u:<username>:rwx' /var/mono
+    setfacl -Rm 'u:<username>:rwx' /var/mono
     ````
 
 - cp dependencies
     ````sh
-    install -o mono -g mono -m 750 dll/generatedModel.dll /var/mono/wwwroot/myFirstMono/
+    install -o mono -g mono -m 750 dll/generatedModel.dll /var/mono/wwwroot/myFirstMono/bin
     find revenj -type f -exec sudo install -o mono -g mono -m 750 '{}' /var/mono/wwwroot/myFirstMono/bin/ \;
     ````
 
@@ -48,6 +48,10 @@ All included (prolly)
     ````sh
     mono Revenj.Http.exe |& less
     ````
+
+- check to see localhost:8999/Domain.svc/search/myModule.A
+
+
 
 - to be continued ...
 
