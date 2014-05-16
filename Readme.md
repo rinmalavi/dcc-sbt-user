@@ -29,8 +29,8 @@ All included (prolly)
     ````sh
     cd csproj
     xbuild generatedModel.csproj
-    install -o mono -g mono -m 750 ../revenj/Revenj.Http.exe.config /var/mono/wwwroot/myFirstMono/bin/
-    find bin/Debug -type f -exec sudo install -o mono -g mono -m 750 '{}' /var/mono/wwwroot/myFirstMono/bin/ \;
+    install -g mono -m 750 ../revenj/Revenj.Http.exe.config /var/mono/wwwroot/myFirstMono/bin/
+    find bin/Debug -type f -exec sudo install -g mono -m 750 '{}' /var/mono/wwwroot/myFirstMono/bin/ \;
     ````
 
 #To start the server
@@ -44,14 +44,13 @@ All included (prolly)
     exec mono Revenj.Http.exe "$@" > ../logs/mono.log 2>&1
     bash /var/mono/wwwroot/myFirstMono/start.sh
     ````
+
 - or form bin/
     ````sh
     mono Revenj.Http.exe |& less
     ````
 
 - check to see localhost:8999/Domain.svc/search/myModule.A
-
-
 
 - to be continued ...
 
