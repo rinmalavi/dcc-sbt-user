@@ -14,6 +14,10 @@ libraryDependencies ++= Seq(
   "com.dslplatform" % "dsl-client-http-apache" % "0.4.14"
 )
 
+resolvers in ThisBuild += "NGS Snapshots" at "http://ngs.hr/nexus/content/repositories/snapshots/"
+
+credentials in ThisBuild += Credentials(Path.userHome / ".config" / "dsl-compiler-client" / "nexus.config")
+
 targetSources := Set("Java")
 
 packageName := "namespace"

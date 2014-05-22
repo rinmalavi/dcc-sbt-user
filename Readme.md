@@ -23,12 +23,14 @@ restart mono if the target path was `/var/mono/wwwroot/<app_name>` run `/etc/ini
 
 
 ####Alternativly
+#####to generate dll
 
     cd csproj
     xbuild generatedModel.csproj
     install -g mono -m 750 ../revenj/Revenj.Http.exe.config /var/mono/wwwroot/<app_name>/bin/
     find bin/Debug -type f -exec sudo install -g mono -m 750 '{}' /var/mono/wwwroot/<app_name>/bin/ \;
 
+- or if runScript.sh was left behind, but the rest failed, use that one
 
 ####To start the server
 
