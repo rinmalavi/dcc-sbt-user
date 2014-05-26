@@ -1,11 +1,11 @@
-import com.dslplatform.compiler.client.api.core.impl.UnmanagedDSLImpl
+
 import dslplatform.CompilerPlugin.DslKeys._
 
-username := "rinmalavi@gmail.com"
+val dslConfig = com.typesafe.config.ConfigFactory.parseFile(file(System.getProperty("user.home")) / ".config" /  "some.txt")
 
-password := "qwe321"
+username := dslConfig.getString("dsl.username")
 
-dslProjectId := "4b875a05-fc95-4591-a76d-b73210dbcb31"
+password := dslConfig.getString("dsl.password")
 
 outputDirectory := Some(file("src/main"))
 
@@ -24,9 +24,11 @@ packageName := "namespace"
 
 monoDependencyFolder    := file(System.getProperty("user.home")) / "code" / "dsl_compiler_client_user" / "revenj"
 
-//api := new com.dslplatform.compiler.client.ApiImpl(new com.dslplatform.compiler.client.api.core.impl.HttpRequestBuilderImpl(), new com.dslplatform.compiler.client.api.core.mock.HttpTransportMock(), new UnmanagedDSLImpl())
-//api := new com.dslplatform.compiler.client.ApiImpl(new com.dslplatform.compiler.client.api.core.impl.HttpRequestBuilderImpl(), new com.dslplatform.compiler.client.api.core.mock.HttpTransportMock(), com.dslplatform.compiler.client.api.core.mock.UnmanagedDSLMock.mock_single_integrated)
+monoServerLocation      := file(System.getProperty("user.home")) / "wwwroot" / "applicationname"
 
-databaseConnection := Map("ServerName" -> "localhost", "Port" -> "5432", "DatabaseName" -> "dccTest", "User" -> "dccTest", "Password" -> "dccTest")
-
-
+databaseConnection := Map(
+    "ServerName" -> dslConfig.getString("db.ServerName"),
+    "Port" -> dslConfig.getString("db.Port"),
+    "DatabaseName" -> dslConfig.getString("db.DatabaseName"),
+    "User" -> dslConfig.getString("db.User"),
+    "Password" -> dslConfig.getString("db.Password"))
