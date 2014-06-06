@@ -1,6 +1,6 @@
 import dslplatform.CompilerPlugin.DslKeys._
 
-projectPropsPath :=  Some(file(System.getProperty("user.home")) / ".config" /  "dsl-compiler-client" / "test.credentials")
+projectPropsPath :=  Some(file(System.getProperty("user.home")) / ".config" /  "dccTest" / "project.props")
 
 outputDirectory := Some(file("src/main"))
 
@@ -9,7 +9,7 @@ libraryDependencies ++= Seq(
   "com.dslplatform" % "dsl-client-http-apache" % "0.4.14"
 )
 
-targetSources := Set("Java")
+targetSources := Set("Java", "Scala")
 
 packageName := "namespace"
 
