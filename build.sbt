@@ -1,6 +1,6 @@
 import dslplatform.CompilerPlugin.DslKeys._
 
-projectPropsPath :=  Some(file(System.getProperty("user.home")) / ".config" /  "dccTest" / "project.props")
+projectPropsPath :=  Some(file(System.getProperty("user.home")) / ".config" /  "dccTest" / "project.prop")
 
 outputDirectory := Some(file("src/main"))
 
@@ -11,7 +11,6 @@ libraryDependencies ++= Seq(
 
 targetSources := Set("Java", "Scala")
 
-packageName := "namespace"
 
 monoDependencyFolder    := file(System.getProperty("user.home")) / "code" / "dsl_compiler_client_user" / "revenj"
 
