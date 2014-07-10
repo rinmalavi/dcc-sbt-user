@@ -1,6 +1,6 @@
 import dslplatform.CompilerPlugin.DslKeys._
 
-projectPropsPath :=  Some(file(System.getProperty("user.home")) / ".config" /  "dccTest" / "project.prop")
+projectPropsPath :=  Some(file(System.getProperty("user.home")) / ".config" /  "dccTest" / "project.props")
 
 outputDirectory := Some(file("src/main"))
 
